@@ -2,6 +2,8 @@
 
 A team project for CS 343, Lab 7.
 
+## Contributors  
+-Aidan Lintott
 ## Live site
 
 (add the GitHub Pages URL here)
