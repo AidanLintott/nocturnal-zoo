@@ -3,7 +3,7 @@
 :root {
     --bg: #fdf6e3;
     --fg: #2b2b2b;
-    --accent: #c2255c;
+    --accent: #12f885;
 }
 
 body {
@@ -72,8 +72,29 @@ a {
 
 
 /* ===== Grid layout (Role A) ===== */
+.site-header { grid-area: header; }
+.site-nav    { grid-area: nav; }
+.site-main   { grid-area: main; }
+.site-footer { grid-area: footer; }
 
+.page {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
 
+@media (min-width: 40rem) {
+    .page {
+        grid-template-columns: 12rem 1fr;
+        grid-template-areas:
+            "header header"
+            "nav    main"
+            "footer footer";
+    }
+}
 
 /* ===== Navigation menu (Role B) ===== */
 .site-nav ul {
@@ -96,6 +117,13 @@ a {
 
 
 /* ===== Dark mode (Role C) ===== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #1b1b2f;
+        --fg: #e8e8f0;
+        --accent: #f5c542;
+    }
+}
 
 
 
