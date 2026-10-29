@@ -37,6 +37,8 @@ a {
     list-style: none;
 }
 
+
+
 .site-main {
     padding: 1rem;
 }
@@ -95,7 +97,23 @@ a {
 }
 
 /* ===== Navigation menu (Role B) ===== */
+.site-nav ul {
+    display: none;
+}
 
+.site-nav ul.open {
+    display: block;
+}
+
+@media (min-width: 40rem) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .site-nav ul {
+        display: block;
+    }
+}
 
 
 /* ===== Dark mode (Role C) ===== */
